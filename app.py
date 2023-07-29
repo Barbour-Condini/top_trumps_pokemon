@@ -9,7 +9,7 @@ import random
 import pokefunctions as pokemon
 
 app = Flask(__name__)
-with open("config.json", "r") as f:
+with open("dev_config.json", "r") as f:
     load = json.load(f)
     app.config['SECRET_KEY'] = load["APP.SECRET_KEY"]
 
@@ -70,8 +70,12 @@ def computer_select():
     computer_card_no = len(session['computer_cards'])
     draw_card_no = len(session['draw_cards'])
 
+    # save player and computer stats to the session so you can access them from any view function
+    session["player_stats"] = player_stats
+    session["computer_stats"] = computer_stats
+
     if request.method=='POST': 
-        # this means the user has clicked the 'Next' button
+        # the user has clicked the 'Next' button, so go to the result route
         return redirect(url_for('result'))
     
     # capture the selected stat and save it to the session
@@ -113,7 +117,7 @@ def result():
         else:
             return redirect(url_for('computer_select'))
     
-    # else if player's come straight here from select.html:
+    # else if player's come straight here from one of the select.html routes:
     # then render the template, passing in three objects as arguments so the template knows what they reference
     return render_template('result.html', selected_stat=selected_stat, player_stat=player_stat, 
                            computer_stat=computer_stat, computer_pokemon_name=computer_pokemon_name)
