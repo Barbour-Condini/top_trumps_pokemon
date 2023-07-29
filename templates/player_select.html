@@ -2,15 +2,7 @@
 
 {% block content %}
 
-<!--error message if user submits invalid stat-->
-{% if get_flashed_messages() %}
-    <div class="alert">{{ get_flashed_messages()[0] }}</div>
-{% endif %}
-
-<h1 class="title">{% block title %} Choose your stat {% endblock %}</h1>
-
-
-<center>
+    <h1 class="title">{% block title %} Choose your stat {% endblock %}</h1>
 
     <div>
         <p>Card counts: <br>
@@ -53,6 +45,6 @@
             <p>Defense: ???</p>
         </div>
     </div>
-</center>
+
 
 {% endblock %}
