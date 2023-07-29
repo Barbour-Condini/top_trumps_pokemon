@@ -42,7 +42,7 @@ $ python3
  {"APP.SECRET_KEY": "ADD_KEY_HERE"}
 ```
 
-6. Paste your secret key from step 4 to replace `"ADD_KEY_HERE"`. The key will need double quote marks round it, so that JSON recognises it as a string.
+6. Paste your secret key from step 4 to replace `"ADD_KEY_HERE"`. The key will need double quote marks round it.
 
 
 
