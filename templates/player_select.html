@@ -18,30 +18,20 @@
 -->
 
 <center>
-    <center>
+    
+        <p>{{ player_name }} card count: {{ player_card_no }}</p>
+        <p>Computer card count: {{ computer_card_no }}</p>
+        <p>Draw stack card count: {{ draw_card_no }}</p>
         <p>{{ player_name }}, you gotta catch 'em all!</p>
-    </center>
+    
     <div class="grid-container">
+        
         <div class="grid-item">
-            <p>Player 1 ({{ player_name }})</p>
-            <p>Card count: {{ player_card_no }}</p>
-        </div>
-        <div class="grid-item">
-            <p>Player 2 (computer)</p>
-            <p>Card count: {{ computer_card_no }} </p>
-        </div>
-        <div class="grid-item">
-
-        </div>
-        <div class="grid-item">
-            <p>Cards in draw stack: {{ draw_card_no }}</p>
-        </div>
-        <div class="grid-item">
-            <!--<img src="{{ card_blank }}" alt="Pokemon Card Back" height="150px" width="75px">-->
+            <img src="static/card_back.png" alt="Pokemon Card Back" height="150px" width="75px">
             <p>Pokemon: {{ player_stats['name'] }}</p>
         </div>
         <div class="grid-item">
-            <!--<img src="{{ card_back }}" alt="Pokemon Card Back" height="150px" width="75px">-->
+            <img src="static/card_back.png" alt="Pokemon Card Back" height="150px" width="75px">
             <p>Pokemon: ???</p>
         </div>
         <div class="grid-item">

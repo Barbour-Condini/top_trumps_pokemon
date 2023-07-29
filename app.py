@@ -2,9 +2,8 @@
 # added card deck, pokemon deck and draw deck numbers to teh select.html templates
 # moved route view logic to external play_round() function in pokemon_gui module
 
-import os
 import json
-from flask import Flask, render_template, request, url_for, redirect, flash, session
+from flask import Flask, render_template, request, url_for, redirect, session
 import random
 import pokefunctions as pokemon
 
