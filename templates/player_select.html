@@ -9,20 +9,17 @@
 
 <h1 class="title">{% block title %} Choose your stat {% endblock %}</h1>
 
-<!-- 
-<p>Player pokemon stats: {{ player_stats }}</p>
-<p>Computer pokemon stats: {{ computer_stats }}</p>
-<p>Player card deck: {{ player_card_no }}</p>
-<p>Computer card deck: {{ computer_card_no }}</p>
-<p>Draw card deck: {{ draw_card_no }}</p>
--->
 
 <center>
-    
-        <p>{{ player_name }} card count: {{ player_card_no }}</p>
-        <p>Computer card count: {{ computer_card_no }}</p>
-        <p>Draw stack card count: {{ draw_card_no }}</p>
+
+    <div>
+        <p>Card counts: <br>
+            {{ player_name }}: {{ player_card_no }}<br>
+            Computer: {{ computer_card_no }}<br>
+            Draw stack: {{ draw_card_no }}<br>
+        </p>
         <p>{{ player_name }}, you gotta catch 'em all!</p>
+    </div>
     
     <div class="grid-container">
         
