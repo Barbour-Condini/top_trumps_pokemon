@@ -2,14 +2,13 @@
 # added card deck, pokemon deck and draw deck numbers to teh select.html templates
 # moved route view logic to external play_round() function in pokemon_gui module
 
-import os
 import json
-from flask import Flask, render_template, request, url_for, redirect, flash, session
+from flask import Flask, render_template, request, url_for, redirect, session
 import random
 import pokefunctions as pokemon
 
 app = Flask(__name__)
-with open("dev_config.json", "r") as f:
+with open("config.json", "r") as f:
     load = json.load(f)
     app.config['SECRET_KEY'] = load["APP.SECRET_KEY"]
 
@@ -27,6 +26,8 @@ def start():
     session["draw_cards"] = draw_cards
 
     if request.method=='POST':
+        player_name = request.form['player_name']
+        session["player_name"] = player_name
         return redirect(url_for('player_select'))
     return render_template('start.html')
 
@@ -40,25 +41,22 @@ def player_select():
     player_card_no = len(session['player_cards'])
     computer_card_no = len(session['computer_cards'])
     draw_card_no = len(session['draw_cards'])
+    player_name = session["player_name"]
 
     # save player and computer stats to the session so you can access them from any view function
     session["player_stats"] = player_stats
     session["computer_stats"] = computer_stats
 
     if request.method=='POST': 
-        # reprompt them for a choice if they've typed an invalid stat
-        if request.form.get('stat') not in selectable_stats:
-            flash('Type a valid stat: height; weight; speed; hp; attack; defense')
-            return render_template('player_select.html', player_stats=player_stats, computer_stats=computer_stats, 
-                                   player_card_no=player_card_no, computer_card_no=computer_card_no, draw_card_no=draw_card_no)
         # capture the selected stat and save it to the session
-        session["selected_stat"] = request.form['stat']
+        session["selected_stat"] = request.form['selected_stat']
         # print(session["selected_stat"])
 
         return redirect(url_for('result'))
 
     return render_template('player_select.html', player_stats=player_stats, computer_stats=computer_stats,
-                           player_card_no=player_card_no, computer_card_no=computer_card_no, draw_card_no=draw_card_no)
+                           player_card_no=player_card_no, computer_card_no=computer_card_no, draw_card_no=draw_card_no,
+                           player_name = player_name)
 
 
 @app.route("/computer_select", methods=['GET', 'POST'])
@@ -69,8 +67,9 @@ def computer_select():
     player_card_no = len(session['player_cards'])
     computer_card_no = len(session['computer_cards'])
     draw_card_no = len(session['draw_cards'])
+    player_name=session['player_name']
 
-    # save player and computer stats to the session so you can access them from any view function
+    # save player and computer stats to the session
     session["player_stats"] = player_stats
     session["computer_stats"] = computer_stats
 
@@ -82,7 +81,8 @@ def computer_select():
     session["selected_stat"] = selectable_stats[random.randint(0, 5)]
     # print(session["selected_stat"])
     return render_template('computer_select.html', player_stats=player_stats, computer_stats=computer_stats,
-                           player_card_no=player_card_no, computer_card_no=computer_card_no, draw_card_no=draw_card_no)
+                           player_card_no=player_card_no, computer_card_no=computer_card_no, draw_card_no=draw_card_no,
+                           player_name=player_name)
 
 
 @app.route("/result", methods=['GET', 'POST'])
