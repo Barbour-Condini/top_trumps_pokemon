@@ -15,7 +15,7 @@ The project is currently in its ugly ~~duckling~~ pocket monster phase. Styling 
 
 1. In your terminal, navigate to (or create) an empty directory that you want to clone this repo into. Then enter:
 ```
-$ git clone {}
+$ git clone https://github.com/Barbour-Condini/top_trumps_pokemon.git
 ```
 
 2. Initialise and activate a virtual environment 
