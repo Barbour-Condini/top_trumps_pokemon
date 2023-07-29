@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1 class="title">{% block title %} The computer will select a stat {% endblock %}</h1>
+
+<p>Player pokemon stats: {{ player_stats }}</p>
+<p>Computer pokemon stats: {{ computer_stats }}</p>
+<p>Player card deck: {{ player_card_no }}</p>
+<p>Computer card deck: {{ computer_card_no }}</p>
+<p>Draw card deck: {{ draw_card_no }}</p>
+
+<center>
+    <form method="post">
+        <center><button type="submit">Next</button></center>
+    </form>
+</center>
+
+{% endblock %}
