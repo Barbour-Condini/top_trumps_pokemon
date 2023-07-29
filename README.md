@@ -7,7 +7,7 @@
 
 ## About
 
-Welcome! This project uses the [PokeAPI](https://pokeapi.co/) and [Flask](https://flask.palletsprojects.com/en/2.3.x/) to simulate a top trumps game, played against your computer.
+Welcome! This project uses [PokeAPI](https://pokeapi.co/) and [Flask](https://flask.palletsprojects.com/en/2.3.x/) to simulate a top trumps game, played against your computer.
 
 The project is currently in its ugly ~~duckling~~ pocket monster phase. Styling is in the pipeline to turn it into a very fine ~~swan~~ pokemon indeed.
 
