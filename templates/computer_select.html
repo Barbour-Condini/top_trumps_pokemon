@@ -4,16 +4,62 @@
 
 <h1 class="title">{% block title %} The computer will select a stat {% endblock %}</h1>
 
+<!--
 <p>Player pokemon stats: {{ player_stats }}</p>
 <p>Computer pokemon stats: {{ computer_stats }}</p>
 <p>Player card deck: {{ player_card_no }}</p>
 <p>Computer card deck: {{ computer_card_no }}</p>
 <p>Draw card deck: {{ draw_card_no }}</p>
+-->
 
 <center>
-    <form method="post">
-        <center><button type="submit">Next</button></center>
-    </form>
+    <div class="grid-container">
+        <div class="grid-item">
+            <p>Player 1 ({{ player_name }})</p>
+            <p>Card count: {{ player_card_no }}</p>
+        </div>
+        <div class="grid-item">
+            <p>Player 2 (computer)</p>
+            <p>Card count: {{ computer_card_no }} </p>
+        </div>
+        <div class="grid-item">
+
+        </div>
+        <div class="grid-item">
+            <p>Cards in draw stack: {{ draw_card_no }}</p>
+        </div>
+        <div class="grid-item">
+            <img src="{{ card_blank }}" alt="Pokemon Card Back" height="150px" width="75px">
+            <p>Pokemon: {{ player_stats['name'] }}</p>
+        </div>
+        <div class="grid-item">
+            <img src="{{ card_back }}" alt="Pokemon Card Back" height="150px" width="75px">
+            <p>Pokemon: {{ computer_stats['name'] }}</p>
+        </div>
+        <div class="grid-item">
+            <p>Height: {{ player_stats['height'] }} </p>
+            <p>Weight: {{ player_stats['weight'] }}</p>
+            <p>Speed: {{ player_stats['speed'] }}</p>
+            <p>HP: {{ player_stats['hp'] }}</p>
+            <p>Attack: {{ player_stats['attack'] }}</p>
+            <p>Defense: {{ player_stats['defense'] }}</p>
+        </div>
+        <div class="grid-item">
+            <p>Height: {{ computer_stats['height'] }}</p>
+            <p>Weight: {{ computer_stats['weight'] }}</p>
+            <p>Speed: {{ computer_stats['speed'] }}</p>
+            <p>HP: {{ computer_stats['hp'] }}</p>
+            <p>Attack: {{ computer_stats['attack'] }}</p>
+            <p>Defense: {{ computer_stats['defense'] }}</p>
+        </div>
+    </div>
+
+    <br>
+
+        <form method="post">
+            <center><button type="submit">Next</button></center>
+        </form>
+
 </center>
 
 {% endblock %}
