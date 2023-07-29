@@ -122,6 +122,4 @@ def end_of_play(player_cards, computer_cards):
     if len(player_cards) > len(computer_cards):
         return 'You win the game!'
     elif len(computer_cards) > len(player_cards):
-        return 'Computer wins the game!'
-    else:
-        return 'It\'s a draw!'
+        return 'Computer wins! You have lost all your pokemon, trainer.'

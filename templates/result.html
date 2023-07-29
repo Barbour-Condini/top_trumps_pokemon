@@ -1,13 +1,15 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1 class="title">{% block title %} Result {% endblock %}</h1>
-<center>
+
+
+    <h1 class="title">{% block title %} Result {% endblock %}</h1>
+
     <form method="post">
         <p>Stat to compare: {{ selected_stat }}</p>
         <p>Your pokemon's {{ selected_stat }} is {{ player_stat }}.</p>
         <p>The computer's pokemon was {{ computer_pokemon_name }} and their {{ selected_stat }} is {{ computer_stat }}</p>
         <center><button type="submit">Next card</button></center>
     </form>
-</center>
+
 {% endblock %}
