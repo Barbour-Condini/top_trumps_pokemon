@@ -4,7 +4,7 @@
 - [About](#about)
 - [Setup guide](#setup-guide)
 - [Roadmap](#roadmap)
-- [Acknoweldgements](#acknowledgements)
+- [Acknowledgements](#acknowledgements)
 
 ## About
 
