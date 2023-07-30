@@ -4,10 +4,11 @@
 - [About](#about)
 - [Setup guide](#setup-guide)
 - [Roadmap](#roadmap)
+- [Acknoweldgements](#acknowledgements)
 
 ## About
 
-Welcome! This project uses [PokeAPI](https://pokeapi.co/) and [Flask](https://flask.palletsprojects.com/en/2.3.x/) to simulate a top trumps game, played against your computer.
+Welcome! This project uses [PokéAPI](https://pokeapi.co/) and [Flask](https://flask.palletsprojects.com/en/2.3.x/) to simulate a top trumps game, played against your computer.
 
 The project is currently in its ~~ugly duckling~~ pocket monster phase. Styling is in the pipeline to turn it into a very fine ~~swan~~ pokemon indeed.
 
@@ -50,6 +51,12 @@ You should be all set for gameplay! Run the `app.py` file to go catch 'em all.
 
 
 ## Roadmap
-- [ ]: Add login functionality 
-- [ ]: Add a database with SQLAlchemy to let users track their scores, win streaks etc.
-- [ ]: Call an emergency CSS intervention to put some bootstraps on these pokemons' shoes.
+- Add login functionality 
+- Add a database with SQLAlchemy to let users track their scores, win streaks etc.
+- Call an emergency CSS intervention to put some bootstraps on these pokemons' shoes.
+
+
+## Acknowledgements
+
+- Pokemon pngs from [PokéSprite](https://msikma.github.io/pokesprite/)
+- Pokemon data from [PokéAPI](https://pokeapi.co)
