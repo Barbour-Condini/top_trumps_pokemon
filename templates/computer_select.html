@@ -15,12 +15,12 @@
 
     <div class="grid-container">
         <div class="grid-item">
-            <img src="static/card_back.png" alt="Pokemon Card Back" height="150px" width="75px">
+            <img class='pokemon_img' src="static/pokemon/{{ player_stats['name'] }}.png" alt="{{ player_stats['name']}}">
             <p>Pokemon: {{ player_stats['name'] }}</p>
         </div>
         <div class="grid-item">
-            <img src="static/card_back.png" alt="Pokemon Card Back" height="150px" width="75px">
-            <p>Pokemon: {{ computer_stats['name'] }}</p>
+            <img src="static/card_back.png" alt="Pokemon card back" height="150" width="75">
+            <p>Pokemon: ???</p>
         </div>
         <div class="grid-item">
             <p>Height: {{ player_stats['height'] }} </p>
@@ -31,12 +31,12 @@
             <p>Defense: {{ player_stats['defense'] }}</p>
         </div>
         <div class="grid-item">
-            <p>Height: {{ computer_stats['height'] }}</p>
-            <p>Weight: {{ computer_stats['weight'] }}</p>
-            <p>Speed: {{ computer_stats['speed'] }}</p>
-            <p>HP: {{ computer_stats['hp'] }}</p>
-            <p>Attack: {{ computer_stats['attack'] }}</p>
-            <p>Defense: {{ computer_stats['defense'] }}</p>
+            <p>Height: ???</p>
+            <p>Weight: ???</p>
+            <p>Speed: ???</p>
+            <p>HP: ???</p>
+            <p>Attack: ???</p>
+            <p>Defense: ???</p>
         </div>
     </div>
 

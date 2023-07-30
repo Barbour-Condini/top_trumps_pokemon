@@ -10,7 +10,7 @@ def card_allocation():
     """
 
     # initialise a list of pokemon ids, which represent the cards
-    id_list = list(range(1, 151))
+    id_list = list(range(1, 200))
 
     # shuffle that list
     random.shuffle(id_list)
@@ -116,10 +116,10 @@ def card_reallocation(winner_cards, loser_cards, draw_cards):
 
 def end_of_play(player_cards, computer_cards):
     """"
-    return: (string) the result of the game (win, lose, draw)
+    return: (string) the winner/loser of the game 
     """
 
     if len(player_cards) > len(computer_cards):
-        return 'You win the game!'
+        return 'You win!'
     elif len(computer_cards) > len(player_cards):
         return 'Computer wins! You have lost all your pokemon, trainer.'
