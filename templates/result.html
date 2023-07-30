@@ -9,6 +9,34 @@
         <p>Stat to compare: {{ selected_stat }}</p>
         <p>Your pokemon's {{ selected_stat }} is {{ player_stat }}.</p>
         <p>The computer's pokemon was {{ computer_pokemon_name }} and their {{ selected_stat }} is {{ computer_stat }}</p>
+
+        <div class="grid-container">
+            <div class="grid-item">
+                <img class='pokemon_img' src="static/pokemon/{{ player_stats['name'] }}.png" alt="{{ player_stats['name']}}">
+                <p>Pokemon: {{ player_stats['name'] }}</p>
+            </div>
+            <div class="grid-item">
+                <img class='pokemon_img' src="static/pokemon/{{ computer_stats['name'] }}.png" alt="{{ computer_stats['name']}}">
+                <p>Pokemon: {{ computer_stats['name'] }}</p>
+            </div>
+            <div class="grid-item">
+                <p>Height: {{ player_stats['height'] }} </p>
+                <p>Weight: {{ player_stats['weight'] }}</p>
+                <p>Speed: {{ player_stats['speed'] }}</p>
+                <p>HP: {{ player_stats['hp'] }}</p>
+                <p>Attack: {{ player_stats['attack'] }}</p>
+                <p>Defense: {{ player_stats['defense'] }}</p>
+            </div>
+            <div class="grid-item">
+                <p>Height: {{ computer_stats['height'] }}</p>
+                <p>Weight: {{ computer_stats['weight'] }}</p>
+                <p>Speed: {{ computer_stats['speed'] }}</p>
+                <p>HP: {{ computer_stats['hp'] }}</p>
+                <p>Attack: {{ computer_stats['attack'] }}</p>
+                <p>Defense: {{ computer_stats['defense'] }}</p>
+            </div>
+        </div>
+
         <center><button type="submit">Next card</button></center>
     </form>
 

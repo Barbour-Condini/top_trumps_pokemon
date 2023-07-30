@@ -8,7 +8,7 @@ import random
 import pokefunctions as pokemon
 
 app = Flask(__name__)
-with open("config.json", "r") as f:
+with open("dev_config.json", "r") as f:
     load = json.load(f)
     app.config['SECRET_KEY'] = load["APP.SECRET_KEY"]
 
@@ -120,7 +120,8 @@ def result():
     # else if player's come straight here from one of the select.html routes:
     # then render the template, passing in three objects as arguments so the template knows what they reference
     return render_template('result.html', selected_stat=selected_stat, player_stat=player_stat, 
-                           computer_stat=computer_stat, computer_pokemon_name=computer_pokemon_name)
+                           computer_stat=computer_stat, computer_pokemon_name=computer_pokemon_name,
+                           player_stats=session['player_stats'], computer_stats=session['computer_stats'])
 
 
 @app.route("/end", methods=['GET', 'POST'])
