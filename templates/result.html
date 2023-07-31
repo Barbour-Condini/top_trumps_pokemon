@@ -3,21 +3,24 @@
 {% block content %}
 
 
-    <h1 class="title">{% block title %} Result {% endblock %}</h1>
+    <h1 class="title">{% block title %} {{ selected_stat.upper() }} {% endblock %}</h1>
 
     <form method="post">
-        <p>Stat to compare: {{ selected_stat }}</p>
-        <p>Your pokemon's {{ selected_stat }} is {{ player_stat }}.</p>
-        <p>The computer's pokemon was {{ computer_pokemon_name }} and their {{ selected_stat }} is {{ computer_stat }}</p>
+        <p>{{ player_name }}'s pokemon: {{ player_stat }}</p>
+        <p>Computer's pokemon: {{ computer_stat }}</p>
 
         <div class="grid-container">
             <div class="grid-item">
                 <img class='pokemon_img' src="static/pokemon/{{ player_stats['name'] }}.png" alt="{{ player_stats['name']}}">
-                <p>Pokemon: {{ player_stats['name'] }}</p>
             </div>
             <div class="grid-item">
                 <img class='pokemon_img' src="static/pokemon/{{ computer_stats['name'] }}.png" alt="{{ computer_stats['name']}}">
-                <p>Pokemon: {{ computer_stats['name'] }}</p>
+            </div>
+            <div class="grid-item">
+                <p>{{ player_name }}: {{ player_stats['name'] }}</p>
+            </div>
+            <div class="grid-item">
+                <p>Computer: {{ computer_stats['name'] }}</p>
             </div>
             <div class="grid-item">
                 <p>Height: {{ player_stats['height'] }} </p>
@@ -37,7 +40,7 @@
             </div>
         </div>
 
-        <center><button type="submit">Next card</button></center>
+        <center><button class='next-button' type="submit">Next card</button></center>
     </form>
 
 {% endblock %}

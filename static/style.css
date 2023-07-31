@@ -1,0 +1,38 @@
+/* universal */
+body {
+    background-color: #ffe6b4;
+    font-family: 'Press Start 2P', cursive;
+}
+
+/* card grid */
+.grid-container {
+    display: grid;
+    grid-template-columns: 45% 45%;
+    max-width: 800px;
+    column-gap: 10%;
+}
+
+.grid-item {
+    border: 2px solid #000000;
+    /* border-inline-color: #ffe6b4; */
+    padding: 20px;
+    font-size: 13px;
+    text-align: center;
+}
+
+.pokemon_img {
+    width: 70%;
+    height: 70%;
+}
+
+/* card count tracker */
+/* 
+.card-counts {
+    text-align: right;
+}
+*/
+
+/* buttons */
+.next-button {
+    margin-top: 40px;
+}

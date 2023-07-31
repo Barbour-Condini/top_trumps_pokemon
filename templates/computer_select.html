@@ -3,10 +3,10 @@
 {% block content %}
 
 
-    <h1 class="title">{% block title %} The computer will select a stat {% endblock %}</h1>
+    <h1 class="title">{% block title %} Computer to select {% endblock %}</h1>
 
     <div>
-        <p>Card counts: <br>
+        <p>
             {{ player_name }}: {{ player_card_no }}<br>
             Computer: {{ computer_card_no }}<br>
             Draw stack: {{ draw_card_no }}<br>
@@ -16,11 +16,15 @@
     <div class="grid-container">
         <div class="grid-item">
             <img class='pokemon_img' src="static/pokemon/{{ player_stats['name'] }}.png" alt="{{ player_stats['name']}}">
-            <p>Pokemon: {{ player_stats['name'] }}</p>
         </div>
         <div class="grid-item">
             <img src="static/card_back.png" alt="Pokemon card back" height="150" width="75">
-            <p>Pokemon: ???</p>
+        </div>
+        <div class="grid-item">
+            <p>{{ player_name }}: {{ player_stats['name'] }}</p>
+        </div>
+        <div class="grid-item">
+            <p>Computer: ???</p>
         </div>
         <div class="grid-item">
             <p>Height: {{ player_stats['height'] }} </p>
@@ -43,7 +47,7 @@
     <br>
 
         <form method="post">
-            <center><button type="submit">Next</button></center>
+            <center><button class='next-button' type="submit">Next</button></center>
         </form>
 
 

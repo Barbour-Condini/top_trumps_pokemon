@@ -121,7 +121,8 @@ def result():
     # then render the template, passing in three objects as arguments so the template knows what they reference
     return render_template('result.html', selected_stat=selected_stat, player_stat=player_stat, 
                            computer_stat=computer_stat, computer_pokemon_name=computer_pokemon_name,
-                           player_stats=session['player_stats'], computer_stats=session['computer_stats'])
+                           player_stats=session['player_stats'], computer_stats=session['computer_stats'],
+                           player_name=session['player_name'])
 
 
 @app.route("/end", methods=['GET', 'POST'])

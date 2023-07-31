@@ -2,26 +2,29 @@
 
 {% block content %}
 
-    <h1 class="title">{% block title %} Choose your stat {% endblock %}</h1>
+    <h1 class="title">{% block title %} Select a stat {% endblock %}</h1>
 
     <div>
-        <p>Card counts: <br>
+        <p>
             {{ player_name }}: {{ player_card_no }}<br>
             Computer: {{ computer_card_no }}<br>
             Draw stack: {{ draw_card_no }}<br>
         </p>
-        <p>{{ player_name }}, you gotta catch 'em all!</p>
     </div>
     
     <div class="grid-container">
         
         <div class="grid-item">
             <img class='pokemon_img' src="static/pokemon/{{ player_stats['name'] }}.png" alt="Pokemon Card Back">
-            <p>Pokemon: {{ player_stats['name'] }}</p>
         </div>
         <div class="grid-item">
             <img src="static/card_back.png" alt="Pokemon Card Back" height="150" width="75">
-            <p>Pokemon: ???</p>
+        </div>
+        <div class="grid-item">
+            <p>{{ player_name }}: {{ player_stats['name'] }}</p>
+        </div>
+        <div class="grid-item">
+            <p>Computer: ???</p>
         </div>
         <div class="grid-item">
             <form method="post"><button type="submit" name="selected_stat" value="height">Height: {{ player_stats['height'] }}</button></form>

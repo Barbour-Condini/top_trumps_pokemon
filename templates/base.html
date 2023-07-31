@@ -5,31 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}{% endblock %} - FlaskApp</title>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/style.css">
     <style>
-        body {
-            background-color: #ffe6b4;
-            font-family: 'Press Start 2P', cursive;
-        }
-
-        .grid-container {
-            display: grid;
-            margin-left: auto;
-            margin-right: auto;
-            grid-template-columns: auto auto;
-            max-width: 800px;
-        }
-
-        .grid-item {
-            border: 1px solid rgba(0, 0, 0, 0.8);
-            padding: 20px;
-            font-size: 15px;
-            text-align: center;
-        }
-
-        .pokemon_img {
-            width: 50%;
-            height: 50%;
-        }
     </style>
 </head>
 <body>
@@ -39,13 +16,14 @@
         <a href="#">Scoreboard</a>
         <a href="#">New Game</a>
     </nav>
--->
+
 
         <hr>
+-->
 
-        <div class="content">
-            {% block content %} {% endblock %}
-        </div>
+    <div class="content">
+        {% block content %} {% endblock %}
+    </div>
     </center>
 </body>
 </html>
