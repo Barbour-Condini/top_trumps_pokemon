@@ -12,7 +12,7 @@
 
 Welcome! This project uses [PokéAPI](https://pokeapi.co/) and [Flask](https://flask.palletsprojects.com/en/2.3.x/) to simulate a top trumps game, played against your computer.
 
-<img src="static/gameplay.png" class='markdown-img' width=40% alt="Gameplay screenshot">
+<img src="static/gameplay.png" class='markdown-img' width=70% alt="Gameplay screenshot">
 
 ## Setup guide
 
