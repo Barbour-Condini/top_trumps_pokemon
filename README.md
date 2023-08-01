@@ -63,7 +63,7 @@ With thanks to:
 - [NES.css](https://nostalgic-css.github.io/NES.css/) (CSS framework & Poké Ball graphic)
 - [PokéSprite](https://msikma.github.io/pokesprite/) (sprite images)
 - [Pokermon](https://github.com/hertantoirawan/pokermon) (card back image)
-- [Pokepalettes](https://pokepalettes.com) (colour palette inspiration)
+- [Pokepalettes](https://pokepalettes.com) (colour palette)
 - [Google Fonts](https://fonts.google.com/) ('Press Start 2P' font)
 
 
