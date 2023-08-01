@@ -32,12 +32,12 @@ $ source .venv/bin/activate
 $ pip install -r requirements.txt
 ```
 
-4. Generate a secret key, and copy it:
+4. Generate a secret key, and copy it
 
 ```
 $ python3
 >>> import os
->>> os.urandom(16).hex()
+>>> os.urandom(24).hex()
 ```
 
 5. Paste the code below into the project's `config.json` file
@@ -45,7 +45,7 @@ $ python3
  {"APP.SECRET_KEY": "ADD_KEY_HERE"}
 ```
 
-6. Paste your secret key from step 4 to replace `"ADD_KEY_HERE"`.
+6. Paste your secret key from step 4 to replace `"ADD_KEY_HERE"`
 
 
 
