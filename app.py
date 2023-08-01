@@ -8,7 +8,7 @@ import random
 import pokefunctions as pokemon
 
 app = Flask(__name__)
-with open("dev_config.json", "r") as f:
+with open("config.json", "r") as f:
     load = json.load(f)
     app.config['SECRET_KEY'] = load["APP.SECRET_KEY"]
 
