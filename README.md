@@ -1,5 +1,6 @@
 # Pokemon top trumps
 
+
 ## Contents
 - [About](#about)
 - [Setup guide](#setup-guide)
@@ -11,7 +12,7 @@
 
 Welcome! This project uses [PokéAPI](https://pokeapi.co/) and [Flask](https://flask.palletsprojects.com/en/2.3.x/) to simulate a top trumps game, played against your computer.
 
-The project is currently in its ~~ugly duckling~~ pocket monster phase. Styling is in the pipeline to give it more convincing 8-bit graphics.
+<img src="static/gameplay.png" class='markdown-img' width=40% alt="Gameplay screenshot">
 
 ## Setup guide
 
@@ -44,7 +45,7 @@ $ python3
  {"APP.SECRET_KEY": "ADD_KEY_HERE"}
 ```
 
-6. Paste your secret key from step 4 to replace `"ADD_KEY_HERE"` (the key will need double quote marks round it).
+6. Paste your secret key from step 4 to replace `"ADD_KEY_HERE"`.
 
 
 
@@ -54,15 +55,16 @@ You should be all set for gameplay! Run the `app.py` file to go catch 'em all.
 ## Roadmap
 - Add login functionality 
 - Add a database with SQLAlchemy to let users track their scores, win streaks etc.
-- Add additional 8-bit styling (e.g. to buttons)
 
 
 ## Acknowledgements
 With thanks to:
 - [PokéAPI](https://pokeapi.co) (Pokemon data)
+- [NES.css](https://nostalgic-css.github.io/NES.css/) (CSS framework & Poké Ball graphic)
 - [PokéSprite](https://msikma.github.io/pokesprite/) (sprite images)
 - [Pokermon](https://github.com/hertantoirawan/pokermon) (card back image)
-- [Google Fonts](https://fonts.google.com/) (*Press Start 2P* font)
+- [Pokepalettes](https://pokepalettes.com) (colour palette inspiration)
+- [Google Fonts](https://fonts.google.com/) ('Press Start 2P' font)
 
 
 ## Licenses

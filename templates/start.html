@@ -1,14 +1,18 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
+        <br><br>
         <h1 class="title">{% block title %} Pokemon Top Trumps {% endblock %}</h1>
+        <br><br>
+        <i class="nes-pokeball"></i>
+        <br><br>
         <form action="/" method="post">
+            <br><br>
             <p>What name do you go by, pokemon trainer?</p>
             <br><br>
             <input autocomplete="off" required autofocus name="player_name" placeholder="Name/Pseudonym" type="text">
             <br><br>
-            <center><button type="submit">Start</button></center>
+            <button class="nes-btn is-warning" type="submit">Start</button>
         </form>
 
 {% endblock %}

@@ -4,14 +4,12 @@
 
 
     <h1 class="title">{% block title %} Computer to select {% endblock %}</h1>
+    
+    <form method="post">
+        <button class="nes-btn is-warning" type="submit">Reveal choice</button>
+    </form>
 
-    <div>
-        <p>
-            {{ player_name }}: {{ player_card_no }}<br>
-            Computer: {{ computer_card_no }}<br>
-            Draw stack: {{ draw_card_no }}<br>
-        </p>
-    </div>
+    <br>
 
     <div class="grid-container">
         <div class="grid-item">
@@ -21,35 +19,49 @@
             <img src="static/card_back.png" alt="Pokemon card back" height="150" width="75">
         </div>
         <div class="grid-item">
-            <p>{{ player_name }}: {{ player_stats['name'] }}</p>
+            <p>{{ player_stats['name'].upper() }}</p>
         </div>
         <div class="grid-item">
-            <p>Computer: ???</p>
+            <p>???</p>
         </div>
         <div class="grid-item">
-            <p>Height: {{ player_stats['height'] }} </p>
-            <p>Weight: {{ player_stats['weight'] }}</p>
-            <p>Speed: {{ player_stats['speed'] }}</p>
-            <p>HP: {{ player_stats['hp'] }}</p>
-            <p>Attack: {{ player_stats['attack'] }}</p>
-            <p>Defense: {{ player_stats['defense'] }}</p>
+            <p class="nes-btn is-disabled">Height: {{ player_stats['height'] }} </p>
+            <br><br>
+            <p class="nes-btn is-disabled">Weight: {{ player_stats['weight'] }}</p>
+            <br><br>
+            <p class="nes-btn is-disabled">Speed: {{ player_stats['speed'] }}</p>
+            <br><br>
+            <p class="nes-btn is-disabled">HP: {{ player_stats['hp'] }}</p>
+            <br><br>
+            <p class="nes-btn is-disabled">Attack: {{ player_stats['attack'] }}</p>
+            <br><br>
+            <p class="nes-btn is-disabled">Defense: {{ player_stats['defense'] }}</p>
         </div>
         <div class="grid-item">
-            <p>Height: ???</p>
-            <p>Weight: ???</p>
-            <p>Speed: ???</p>
-            <p>HP: ???</p>
-            <p>Attack: ???</p>
-            <p>Defense: ???</p>
+            <p class="nes-btn is-disabled">Height: ???</p>
+            <br><br>
+            <p class="nes-btn is-disabled">Weight: ???</p>
+            <br><br>
+            <p class="nes-btn is-disabled">Speed: ???</p>
+            <br><br>
+            <p class="nes-btn is-disabled">HP: ???</p>
+            <br><br>
+            <p class="nes-btn is-disabled">Attack: ???</p>
+            <br><br>
+            <p class="nes-btn is-disabled">Defense: ???</p>
         </div>
     </div>
 
     <br>
 
-        <form method="post">
-            <center><button class='next-button' type="submit">Next</button></center>
-        </form>
-
-
+    <div>
+        <p>
+            {{ player_name }}: {{ player_card_no }}<br>
+            Computer: {{ computer_card_no }}<br>
+            {% if draw_card_no != 0 %}
+                Draw stack: {{ draw_card_no }}<br>
+            {% endif %}
+        </p>
+    </div>
 
 {% endblock %}

@@ -6,8 +6,15 @@
     <h1 class="title">{% block title %} {{ selected_stat.upper() }} {% endblock %}</h1>
 
     <form method="post">
-        <p>{{ player_name }}'s pokemon: {{ player_stat }}</p>
-        <p>Computer's pokemon: {{ computer_stat }}</p>
+        {% if player_stat > computer_stat -%}
+            <button class="nes-btn is-success" type="submit">Next card</button>
+        {% elif computer_stat > player_stat -%}
+            <button class="nes-btn is-error" type="submit">Next card</button>
+        {% else -%}
+            <button class="nes-btn is-warning" type="submit">Next card</button>
+        {% endif %}
+
+        <br><br>
 
         <div class="grid-container">
             <div class="grid-item">
@@ -17,30 +24,40 @@
                 <img class='pokemon_img' src="static/pokemon/{{ computer_stats['name'] }}.png" alt="{{ computer_stats['name']}}">
             </div>
             <div class="grid-item">
-                <p>{{ player_name }}: {{ player_stats['name'] }}</p>
+                <p>{{ player_stats['name'].upper() }}</p>
             </div>
             <div class="grid-item">
-                <p>Computer: {{ computer_stats['name'] }}</p>
+                <p>{{ computer_stats['name'].upper() }}</p>
             </div>
             <div class="grid-item">
-                <p>Height: {{ player_stats['height'] }} </p>
-                <p>Weight: {{ player_stats['weight'] }}</p>
-                <p>Speed: {{ player_stats['speed'] }}</p>
-                <p>HP: {{ player_stats['hp'] }}</p>
-                <p>Attack: {{ player_stats['attack'] }}</p>
-                <p>Defense: {{ player_stats['defense'] }}</p>
+                <p class="nes-btn is-disabled">Height: {{ player_stats['height'] }} </p>
+                <br><br>
+                <p class="nes-btn is-disabled">Weight: {{ player_stats['weight'] }}</p>
+                <br><br>
+                <p class="nes-btn is-disabled">Speed: {{ player_stats['speed'] }}</p>
+                <br><br>
+                <p class="nes-btn is-disabled">HP: {{ player_stats['hp'] }}</p>
+                <br><br>
+                <p class="nes-btn is-disabled">Attack: {{ player_stats['attack'] }}</p>
+                <br><br>
+                <p class="nes-btn is-disabled">Defense: {{ player_stats['defense'] }}</p>
             </div>
             <div class="grid-item">
-                <p>Height: {{ computer_stats['height'] }}</p>
-                <p>Weight: {{ computer_stats['weight'] }}</p>
-                <p>Speed: {{ computer_stats['speed'] }}</p>
-                <p>HP: {{ computer_stats['hp'] }}</p>
-                <p>Attack: {{ computer_stats['attack'] }}</p>
-                <p>Defense: {{ computer_stats['defense'] }}</p>
+                <p class="nes-btn is-disabled">Height: {{ computer_stats['height'] }}</p>
+                <br><br>
+                <p class="nes-btn is-disabled">Weight: {{ computer_stats['weight'] }}</p>
+                <br><br>
+                <p class="nes-btn is-disabled">Speed: {{ computer_stats['speed'] }}</p>
+                <br><br>
+                <p class="nes-btn is-disabled">HP: {{ computer_stats['hp'] }}</p>
+                <br><br>
+                <p class="nes-btn is-disabled">Attack: {{ computer_stats['attack'] }}</p>
+                <br><br>
+                <p class="nes-btn is-disabled">Defense: {{ computer_stats['defense'] }}</p>
             </div>
         </div>
 
-        <center><button class='next-button' type="submit">Next card</button></center>
+        <br>
     </form>
 
 {% endblock %}

@@ -2,12 +2,15 @@
 
 {% block content %}
 
-
+    <br><br>
     <h1 class="title">{% block title %} Training session complete {% endblock %}</h1>
-
+    <br><br>
+    <i class="nes-pokeball"></i>
+    <br><br>
     <form method="post">
         <p>{{ winner }}</p>
-        <center><button type="submit">Train again?</button></center>
+        <br><br>
+        <button class="nes-btn is-warning" type="submit">Train again?</button>
     </form>
 
 {% endblock %}

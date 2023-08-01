@@ -1,7 +1,8 @@
 /* universal */
 body {
-    background-color: #ffe6b4;
+    background-color: #8bbdf6;
     font-family: 'Press Start 2P', cursive;
+    margin: auto;
 }
 
 /* card grid */
@@ -13,16 +14,19 @@ body {
 }
 
 .grid-item {
+    background-color: #ffe6b4;
     border: 2px solid #000000;
     /* border-inline-color: #ffe6b4; */
-    padding: 20px;
+    padding: 10px;
     font-size: 13px;
     text-align: center;
+    vertical-align: middle;
 }
 
 .pokemon_img {
     width: 70%;
-    height: 70%;
+    height: 90%;
+    padding-bottom: -50px;
 }
 
 /* card count tracker */

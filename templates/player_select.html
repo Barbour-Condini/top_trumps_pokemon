@@ -1,17 +1,9 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
+    <br>
     <h1 class="title">{% block title %} Select a stat {% endblock %}</h1>
-
-    <div>
-        <p>
-            {{ player_name }}: {{ player_card_no }}<br>
-            Computer: {{ computer_card_no }}<br>
-            Draw stack: {{ draw_card_no }}<br>
-        </p>
-    </div>
-    
+    <br>
     <div class="grid-container">
         
         <div class="grid-item">
@@ -21,32 +13,48 @@
             <img src="static/card_back.png" alt="Pokemon Card Back" height="150" width="75">
         </div>
         <div class="grid-item">
-            <p>{{ player_name }}: {{ player_stats['name'] }}</p>
+            <p>{{ player_stats['name'].upper() }}</p>
         </div>
         <div class="grid-item">
-            <p>Computer: ???</p>
+            <p>???</p>
         </div>
         <div class="grid-item">
-            <form method="post"><button type="submit" name="selected_stat" value="height">Height: {{ player_stats['height'] }}</button></form>
+            <form method="post"><button class="nes-btn is-warning" type="submit" name="selected_stat" value="height">Height: {{ player_stats['height'] }}</button></form>
             <br>
-            <form method="post"><button type="submit" name="selected_stat" value="weight">Weight: {{ player_stats['weight'] }}</button></form>
+            <form method="post"><button class="nes-btn is-warning" type="submit" name="selected_stat" value="weight">Weight: {{ player_stats['weight'] }}</button></form>
             <br>
-            <form method="post"><button type="submit" name="selected_stat" value="speed">Speed: {{ player_stats['speed'] }}</button></form>
+            <form method="post"><button class="nes-btn is-warning" type="submit" name="selected_stat" value="speed">Speed: {{ player_stats['speed'] }}</button></form>
             <br>
-            <form method="post"><button type="submit" name="selected_stat" value="hp">HP: {{ player_stats['hp'] }}</button></form>
+            <form method="post"><button class="nes-btn is-warning" type="submit" name="selected_stat" value="hp">HP: {{ player_stats['hp'] }}</button></form>
             <br>
-            <form method="post"><button type="submit" name="selected_stat" value="attack">Attack: {{ player_stats['attack'] }}</button></form>
+            <form method="post"><button class="nes-btn is-warning" type="submit" name="selected_stat" value="attack">Attack: {{ player_stats['attack'] }}</button></form>
             <br>
-            <form method="post"><button type="submit" name="selected_stat" value="defense">Defense: {{ player_stats['defense'] }}</button></form>
+            <form method="post"><button class="nes-btn is-warning" type="submit" name="selected_stat" value="defense">Defense: {{ player_stats['defense'] }}</button></form>
         </div>
         <div class="grid-item">
-            <p>Height: ??? </p>
-            <p>Weight: ???</p>
-            <p>Speed: ???</p>
-            <p>HP: ???</p>
-            <p>Attack: ???</p>
-            <p>Defense: ???</p>
+            <button class="nes-btn is-disabled">Height: ???</button>
+            <br><br>
+            <button class="nes-btn is-disabled">Weight: ???</button>
+            <br><br>
+            <button class="nes-btn is-disabled">Speed: ???</button>
+            <br><br>
+            <button class="nes-btn is-disabled">HP: ???</button>
+            <br><br>
+            <button class="nes-btn is-disabled">Attack: ???</button>
+            <br><br>
+            <button class="nes-btn is-disabled">Defense: ???</button>
         </div>
+    </div>
+
+    <div>
+        <br>
+        <p>
+            {{ player_name }}: {{ player_card_no }}<br>
+            Computer: {{ computer_card_no }}<br>
+            {% if draw_card_no != 0 %}
+                Draw stack: {{ draw_card_no }}<br>
+            {% endif %}
+        </p>
     </div>
 
 
