@@ -16,7 +16,7 @@ Welcome! This project uses [PokéAPI](https://pokeapi.co/) and [Flask](https://f
 
 ## Setup guide
 
-1. In your terminal, navigate to (or create) an empty directory that you want to clone this repo into. Then enter:
+1. Clone the repo
 ```
 $ git clone https://github.com/Barbour-Condini/top_trumps_pokemon.git
 ```
