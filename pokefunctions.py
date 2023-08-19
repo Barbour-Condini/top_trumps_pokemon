@@ -34,7 +34,7 @@ def collect_stats(pokemon_id):
 
     return {
         'name': pokemon['name'],
-        # 'id': pokemon['id'],
+        'id': pokemon['id'],
         'height': pokemon['height'],
         'weight': pokemon['weight'],
         'speed': pokemon['stats'][5]['base_stat'],
@@ -47,7 +47,7 @@ def collect_stats(pokemon_id):
 def play_round(selected_stat, player_cards, computer_cards, draw_cards, player_choice):
     """
     simulates 1 round of selecting a stat, comparing stats and reallocating cards.
-    It calls two other functions: select_stat() adn card_reallocation()
+    It calls two other functions: collect_stats() and card_reallocation()
     :params: 
         selected_stat: the pokemon stat that's been chosen for comparison between the player and computer cards
         player_cards; computer_cards: lists of pokemon ids that represent the player and computer card decks
@@ -56,12 +56,9 @@ def play_round(selected_stat, player_cards, computer_cards, draw_cards, player_c
     :return: (dict) player_cards, computer_cards, draw_cards, player_choice
     """
 
-    # identify and label player_stat and computer_stat
-    player_stats = collect_stats(player_cards[0])
-    computer_stats = collect_stats(computer_cards[0])
-
-    player_stat = player_stats[selected_stat]
-    computer_stat = computer_stats[selected_stat]
+    # collect relevant player_stat and computer_stat
+    player_stat = collect_stats(player_cards[0])[selected_stat]
+    computer_stat = collect_stats(computer_cards[0])[selected_stat]
 
     if player_stat > computer_stat:
         reallocated_cards = card_reallocation(player_cards, computer_cards, draw_cards)
@@ -119,7 +116,7 @@ def end_of_play(player_cards, computer_cards):
     return: (string) the winner/loser of the game 
     """
 
-    if len(player_cards) > len(computer_cards):
+    if len(computer_cards) == 0:
         return 'You win!'
-    elif len(computer_cards) > len(player_cards):
+    elif len(player_cards) == 0:
         return 'Computer wins! You have lost all your pokemon, trainer.'

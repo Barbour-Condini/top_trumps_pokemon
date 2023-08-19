@@ -1,14 +1,10 @@
-# added end route
-# added card deck, pokemon deck and draw deck numbers to teh select.html templates
-# moved route view logic to external play_round() function in pokemon_gui module
-
 import json
 from flask import Flask, render_template, request, url_for, redirect, session
 import random
 import pokefunctions as pokemon
 
 app = Flask(__name__)
-with open("config.json", "r") as f:
+with open("dev_config.json", "r") as f:
     load = json.load(f)
     app.config['SECRET_KEY'] = load["APP.SECRET_KEY"]
 
