@@ -1,7 +1,5 @@
 import pokefunctions as pokemon
 
-# height, weight, speed, hp, attack, defense
-
 def test_play_round_returns_dict():
     assert type(pokemon.play_round('height', [1], [2], [], True)) is dict
 
