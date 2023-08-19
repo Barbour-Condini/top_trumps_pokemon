@@ -39,7 +39,6 @@ def test_play_round_draw1():
     assert round1['draw_cards'] == [1, 152]
     assert round1['player_choice'] == True
 
-
 def test_play_round_draw2():
     # speed is 60 for pokemon ids 2 and 36
     round2 = pokemon.play_round('speed', [2, 3, 4], [36, 7, 8], [1, 152], True)
